@@ -33,26 +33,38 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="144.5" height="144.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="plus"/>
+                                                        <connections>
+                                                            <action selector="plusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ElN-No-12e"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mv4-MJ-jCw">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mv4-MJ-jCw">
                                                         <rect key="frame" x="159.5" y="0.0" width="144.5" height="144.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="plus"/>
+                                                        <connections>
+                                                            <action selector="plusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s5k-Iw-zqz"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="oYJ-aU-yqE">
                                                 <rect key="frame" x="0.0" y="159.5" width="304" height="144.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ske-xM-L5r">
-                                                        <rect key="frame" x="0.0" y="0.0" width="144.5" height="144.5"/>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ske-xM-L5r">
+                                                        <rect key="frame" x="0.0" y="0.0" width="304" height="144.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="plus"/>
+                                                        <connections>
+                                                            <action selector="plusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MHc-4O-IEK"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xis-MJ-WTt">
-                                                        <rect key="frame" x="159.5" y="0.0" width="144.5" height="144.5"/>
+                                                    <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xis-MJ-WTt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="144.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="plus"/>
+                                                        <connections>
+                                                            <action selector="plusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DPP-6J-q2t"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -121,16 +133,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 1"/>
                                         <state key="selected" image="Selected"/>
+                                        <connections>
+                                            <action selector="layoutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Gk-AS-2qq"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZg-MH-ojr">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZg-MH-ojr">
                                         <rect key="frame" x="105" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 2"/>
                                         <state key="selected" image="Selected"/>
+                                        <connections>
+                                            <action selector="layoutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H1v-he-C2u"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hra-3c-jqH">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hra-3c-jqH">
                                         <rect key="frame" x="210" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 3"/>
                                         <state key="selected" image="Selected"/>
+                                        <connections>
+                                            <action selector="layoutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ztI-wv-oa7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=compact" axis="vertical"/>
@@ -191,6 +212,15 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outletCollection property="layoutButtons" destination="trE-Uk-LMC" collectionClass="NSMutableArray" id="fVI-qW-0Qs"/>
+                        <outletCollection property="layoutButtons" destination="SZg-MH-ojr" collectionClass="NSMutableArray" id="eCA-5O-nG9"/>
+                        <outletCollection property="layoutButtons" destination="hra-3c-jqH" collectionClass="NSMutableArray" id="b6e-jm-ihG"/>
+                        <outletCollection property="plusButtons" destination="g0i-m1-m0X" collectionClass="NSMutableArray" id="3Yh-94-WMA"/>
+                        <outletCollection property="plusButtons" destination="Mv4-MJ-jCw" collectionClass="NSMutableArray" id="1GC-cl-50Z"/>
+                        <outletCollection property="plusButtons" destination="ske-xM-L5r" collectionClass="NSMutableArray" id="53F-nY-upO"/>
+                        <outletCollection property="plusButtons" destination="Xis-MJ-WTt" collectionClass="NSMutableArray" id="tS7-ZU-Wyl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
