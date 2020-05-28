@@ -15,11 +15,16 @@ class ViewController: UIViewController {
     @IBOutlet var plusButtons: [UIButton]!
     @IBOutlet var layoutButtons: [UIButton]!
     
+    // MARK: - Properties
+    
+    private let imagePickerController = UIImagePickerController()
+    private var selectedPlusButton: UIButton?
+    
     // MARK: - view life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        imagePickerController.delegate = self
     }
 
     // MARK: - actions
@@ -44,6 +49,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plusButtonTapped(_ sender: UIButton) {
-        print("plus")
+        selectedPlusButton = sender
+        present(imagePickerController, animated: true)
+    }
+}
+
+// MARK: - selection and display of the image of the central grid buttons
+
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+        
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let selectedImage = info[.originalImage] as? UIImage else { return }
+        selectedPlusButton?.setImage(selectedImage, for: .normal)
+        dismiss(animated: true)
     }
 }
