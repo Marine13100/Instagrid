@@ -213,6 +213,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="gridView" destination="81U-Kw-isa" id="X9f-Jf-oa8"/>
                         <outletCollection property="layoutButtons" destination="trE-Uk-LMC" collectionClass="NSMutableArray" id="fVI-qW-0Qs"/>
                         <outletCollection property="layoutButtons" destination="SZg-MH-ojr" collectionClass="NSMutableArray" id="eCA-5O-nG9"/>
                         <outletCollection property="layoutButtons" destination="hra-3c-jqH" collectionClass="NSMutableArray" id="b6e-jm-ihG"/>
