@@ -94,12 +94,21 @@ class ViewController: UIViewController {
     }
     
     func share() {
-        // UIActivityViewController, trouver comment gtransformer uner vu en image
-        UIView.animate(withDuration: 0.5) {
-            self.gridView.transform = .identity
+        guard let image = gridView.transformeToImage else { return }
+        // UIActivityViewController, trouver comment transformer une vu en image
+        let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        present(activityViewController, animated: true)
+        activityViewController.completionWithItemsHandler = { _, _, _, _ in
+            UIView.animate(withDuration: 0.5) {
+                self.gridView.transform = .identity
+            }
         }
+        
     }
-}
+    
+    // MARK: - UIActivityViewController
+
+    }
 
 // MARK: - selection and display of the image of the central grid buttons
 
@@ -111,4 +120,15 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         dismiss(animated: true)
     }
 }
+
+extension UIView {
+    var transformeToImage: UIImage? {
+        UIGraphicsBeginImageContext(self.bounds.size)
+        self.drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
+        UIGraphicsEndImageContext()
+        return image
+    }
+}
+
 
