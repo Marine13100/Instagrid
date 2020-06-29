@@ -8,21 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     // MARK: - outlets
     
-    @IBOutlet var plusButtons: [UIButton]!
-    @IBOutlet var layoutButtons: [UIButton]!
-    @IBOutlet weak var gridView: UIView!
+    @IBOutlet private var plusButtons: [UIButton]!
+    @IBOutlet private var layoutButtons: [UIButton]!
+    @IBOutlet private weak var gridView: UIView!
     
     // MARK: - Properties
     
     private let imagePickerController = UIImagePickerController()
     private var selectedPlusButton: UIButton?
     private var swipeGestureRecognizer: UISwipeGestureRecognizer?
-    
-    
     
     // MARK: - view life cycle
     
@@ -39,7 +37,7 @@ class ViewController: UIViewController {
     
     // MARK: - actions
     
-    @IBAction func layoutButtonTapped(_ sender: UIButton) {
+    @IBAction private func layoutButtonTapped(_ sender: UIButton) {
         for button in layoutButtons {
             button.isSelected = false
         }
@@ -58,7 +56,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func plusButtonTapped(_ sender: UIButton) {
+    @IBAction private func plusButtonTapped(_ sender: UIButton) {
         selectedPlusButton = sender
         present(imagePickerController, animated: true)
     }
@@ -77,14 +75,14 @@ class ViewController: UIViewController {
     private func swipeAction() {
         if swipeGestureRecognizer?.direction == .up {
             UIView.animate(withDuration: 0.5, animations: {
-                self.gridView.transform = CGAffineTransform(translationX: 0, y: -1000)
+                self.gridView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
                 
             }, completion: { _ in
                 self.share()
             })
         } else {
             UIView.animate(withDuration: 0.5, animations: {
-                self.gridView.transform = CGAffineTransform(translationX: -1000, y: 0)
+                self.gridView.transform = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
                 
             }, completion: { _ in
                 self.share()
@@ -93,7 +91,9 @@ class ViewController: UIViewController {
         
     }
     
-    func share() {
+    // MARK: - UIActivityViewController
+    
+    private func share() {
         guard let image = gridView.transformeToImage else { return }
         // UIActivityViewController, trouver comment transformer une vu en image
         let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
@@ -106,9 +106,7 @@ class ViewController: UIViewController {
         
     }
     
-    // MARK: - UIActivityViewController
-
-    }
+}
 
 // MARK: - selection and display of the image of the central grid buttons
 
@@ -121,14 +119,5 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     }
 }
 
-extension UIView {
-    var transformeToImage: UIImage? {
-        UIGraphicsBeginImageContext(self.bounds.size)
-        self.drawHierarchy(in: self.bounds, afterScreenUpdates: true)
-        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
-        UIGraphicsEndImageContext()
-        return image
-    }
-}
 
 

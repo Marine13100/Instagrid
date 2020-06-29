@@ -10,6 +10,7 @@
 		FC470AF7246BFD8F00F73B81 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC470AF6246BFD8F00F73B81 /* Images.xcassets */; };
 		FC470AF9246C0AC000F73B81 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC470AF8246C0AC000F73B81 /* Delm-Medium.otf */; };
 		FC470AFB246C0AC900F73B81 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC470AFA246C0AC900F73B81 /* ThirstySoftRegular.otf */; };
+		FC78893624AA277E000BA9D9 /* UIView+tranformeToImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC78893524AA277E000BA9D9 /* UIView+tranformeToImage.swift */; };
 		FCC0B5C22451C686002FFCF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC0B5C12451C686002FFCF9 /* AppDelegate.swift */; };
 		FCC0B5C42451C686002FFCF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC0B5C32451C686002FFCF9 /* SceneDelegate.swift */; };
 		FCC0B5C62451C686002FFCF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC0B5C52451C686002FFCF9 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 		FC470AF6246BFD8F00F73B81 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FC470AF8246C0AC000F73B81 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		FC470AFA246C0AC900F73B81 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
+		FC78893524AA277E000BA9D9 /* UIView+tranformeToImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+tranformeToImage.swift"; sourceTree = "<group>"; };
 		FCC0B5BE2451C686002FFCF9 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC0B5C12451C686002FFCF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC0B5C32451C686002FFCF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC78893724AA28AF000BA9D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FCC0B5C52451C686002FFCF9 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FC78893824AA28C7000BA9D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCC0B5C72451C686002FFCF9 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC78893924AA28DE000BA9D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FC78893524AA277E000BA9D9 /* UIView+tranformeToImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FC78893A24AA2901000BA9D9 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				FCC0B5C12451C686002FFCF9 /* AppDelegate.swift */,
+				FCC0B5C32451C686002FFCF9 /* SceneDelegate.swift */,
+				FC470AF8246C0AC000F73B81 /* Delm-Medium.otf */,
+				FC470AFA246C0AC900F73B81 /* ThirstySoftRegular.otf */,
+				FC470AF6246BFD8F00F73B81 /* Images.xcassets */,
+				FCC0B5CC2451C688002FFCF9 /* LaunchScreen.storyboard */,
+				FCC0B5CF2451C688002FFCF9 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		FCC0B5B52451C686002FFCF9 = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +100,10 @@
 		FCC0B5C02451C686002FFCF9 /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
-				FCC0B5C12451C686002FFCF9 /* AppDelegate.swift */,
-				FCC0B5C32451C686002FFCF9 /* SceneDelegate.swift */,
-				FCC0B5C52451C686002FFCF9 /* ViewController.swift */,
-				FCC0B5C72451C686002FFCF9 /* Main.storyboard */,
-				FC470AF8246C0AC000F73B81 /* Delm-Medium.otf */,
-				FC470AFA246C0AC900F73B81 /* ThirstySoftRegular.otf */,
-				FC470AF6246BFD8F00F73B81 /* Images.xcassets */,
-				FCC0B5CC2451C688002FFCF9 /* LaunchScreen.storyboard */,
-				FCC0B5CF2451C688002FFCF9 /* Info.plist */,
+				FC78893A24AA2901000BA9D9 /* Supporting files */,
+				FC78893924AA28DE000BA9D9 /* Extensions */,
+				FC78893824AA28C7000BA9D9 /* View */,
+				FC78893724AA28AF000BA9D9 /* Controller */,
 			);
 			path = Instagrid;
 			sourceTree = "<group>";
@@ -146,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC78893624AA277E000BA9D9 /* UIView+tranformeToImage.swift in Sources */,
 				FCC0B5C62451C686002FFCF9 /* ViewController.swift in Sources */,
 				FCC0B5C22451C686002FFCF9 /* AppDelegate.swift in Sources */,
 				FCC0B5C42451C686002FFCF9 /* SceneDelegate.swift in Sources */,
@@ -224,7 +260,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -278,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -293,8 +329,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Instagrid/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				INFOPLIST_FILE = "$(SRCROOT)/Instagrid/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,8 +347,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Instagrid/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				INFOPLIST_FILE = "$(SRCROOT)/Instagrid/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
